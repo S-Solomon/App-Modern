@@ -11,14 +11,11 @@ test('navbar renders with correct text', () => {
     const featuresButton = screen.getByText(/Features/i)
     const testimonialButton = screen.getByText(/Testimonial/i)
     const pricingButton = screen.getByText(/Pricing/i)
-    // const getStartedButton = screen.getByText(/Get Started/i)
 
     expect(homeButton).toBeInTheDocument();
     expect(featuresButton).toBeInTheDocument();
     expect(testimonialButton).toBeInTheDocument();
     expect(pricingButton).toBeInTheDocument();
-    // expect(getStartedButton).toBeInTheDocument();
-
 })
 
 test('button text content says Get started', () => {
