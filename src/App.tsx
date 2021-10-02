@@ -5,6 +5,9 @@ const App = () => {
   return (
     <>
       <Header />
+      <section style={{height: '100vh', backgroundColor: 'tomato'}}></section>
+      <section></section>
+      <section></section>
     </>
   )
 }
