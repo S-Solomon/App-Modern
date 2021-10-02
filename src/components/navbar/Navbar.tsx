@@ -30,6 +30,7 @@ const Navbar = ({ isScrolling }: Props) => {
                         isScrolling > 0 ? 'buttonScrolled' : ''
                     }
                     aria-label="Get Started"
+                    data-testid='buttonTest'
                 >
                     Get Started
                 </ButtonStyled>
