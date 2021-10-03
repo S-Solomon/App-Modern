@@ -68,6 +68,15 @@ const NavbarStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     transition: 0.3s all ease;
+    /* @media screen and (min-width: 800px) {
+        padding: 1rem 8rem;
+    } */
+    @media (min-width: 768px) {
+        padding: 1rem 2rem;
+    }
+    @media (min-width: 1200px) {
+        padding: 1rem 8rem;
+    }
 `;
 const ContainerStyled = styled.div`
     display: flex;

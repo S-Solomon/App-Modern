@@ -20,6 +20,13 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'DM Sans', sans-serif;
     }
 
+    p {
+        line-height: 1.85;
+        font-weight: 400;
+        font-size: 0.9rem;
+        font-family: inherit;
+    }
+
     /* .navbar {
         background-color: transparent;
     } */
