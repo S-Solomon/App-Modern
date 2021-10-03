@@ -1,44 +1,57 @@
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import logoLight from '../../assets/logoLight.svg'
 import logoDark from '../../assets/logoDark.svg'
 import { IoMdMenu } from 'react-icons/io';
-
+import SideDrawer from '../sidedrawer/SideDrawer'
 
 interface Props {
     isScrolling: number;
 }
 
 const Navbar = ({ isScrolling }: Props) => {
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    
+    const backdropClickHandler = () => {
+        setDrawerOpen(false)
+    }
+
     return (
-        <NavbarStyled
-            className={isScrolling > 0 ? 'navbarScrolled' : ''}
-        >
-            <ContainerStyled>
-                <LogoStyled>
-                    <img src={isScrolling ? logoDark : logoLight} alt="logo" />
-                </LogoStyled>
-                <LinksStyled className={isScrolling > 0 ? 'linksScrolled' : ''}>
-                    <a href="/">Home</a>
-                    <a href="/">Features</a>
-                    <a href="/">Testimonial</a>
-                    <a href="/">Pricing</a>
-                </LinksStyled>
-            </ContainerStyled>
-            <ButtonsContainer>
-                <ButtonStyled
-                    className={
-                        isScrolling > 0 ? 'buttonScrolled' : ''
-                    }
-                    aria-label="Get Started"
-                    data-testid='buttonTest'
-                >
-                    Get Started
-                </ButtonStyled>
-                <Burger className={isScrolling > 0 ? 'menuScrolled' : ''}>
-                    <IoMdMenu />
-                </Burger>
-            </ButtonsContainer>
-        </NavbarStyled>
+        <React.Fragment>
+            <NavbarStyled className={isScrolling > 0 ? 'navbarScrolled' : ''}>
+                <ContainerStyled>
+                    <LogoStyled>
+                        <img
+                            src={isScrolling ? logoDark : logoLight}
+                            alt="logo"
+                        />
+                    </LogoStyled>
+                    <LinksStyled
+                        className={isScrolling > 0 ? 'linksScrolled' : ''}
+                    >
+                        <a href="/">Home</a>
+                        <a href="/">Features</a>
+                        <a href="/">Testimonial</a>
+                        <a href="/">Pricing</a>
+                    </LinksStyled>
+                </ContainerStyled>
+                <ButtonsContainer>
+                    <ButtonStyled
+                        className={isScrolling > 0 ? 'buttonScrolled' : ''}
+                        aria-label="Get Started"
+                        data-testid="buttonTest"
+                    >
+                        Get Started
+                    </ButtonStyled>
+                    <Burger className={isScrolling > 0 ? 'menuScrolled' : ''}>
+                        <IoMdMenu onClick={() => setDrawerOpen(!drawerOpen)} data-testid='burger'/>
+                    </Burger>
+                </ButtonsContainer>
+            </NavbarStyled>
+            {drawerOpen ? (
+                <SideDrawer closeDrawer={backdropClickHandler} data-testid='drawer'/>
+            ) : null}
+        </React.Fragment>
     );
 }
 

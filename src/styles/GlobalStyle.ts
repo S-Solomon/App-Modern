@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
 
     :root {
         --primary-color: #1F3E76;
+        --secondary-color: #25CB9E;
+        --border-color: rgb(232, 229, 229);
     }
 
     *, ::before, ::after {
