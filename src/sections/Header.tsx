@@ -8,10 +8,12 @@ import watchvideo from '../assets/watchvideo.svg'
 import paypal from '../assets/paypal.svg'
 import google from '../assets/google.svg'
 import dropbox from '../assets/dropbox.svg'
+import Modal from '../components/modal/Modal'
 
 
 export default function Header() {
     const [scrollHeight, setScrollHeight] = useState(0);
+    const [modalActive, setModalActive] = useState(false);
 
     const handleScroll = () => {
         const position = window.scrollY;
@@ -31,14 +33,22 @@ export default function Header() {
                         <LeftArea>
                             <h1>Experience your ultimate mobile application</h1>
                             <p>
-                                Get your blood tests delivered at  home.
-                                collect all samples from the victory of the
-                                managements that supplies best design system
-                                guidelines ever.
+                                Get your blood tests delivered at home. collect
+                                all samples from the victory of the managements
+                                that supplies best design system guidelines
+                                ever.
                             </p>
                             <div className="buttonGroup">
-                                <div className="button-started" aria-label="Get Started">Get Started</div>
-                                <div className="button-video" aria-label="Watch Video">
+                                <div
+                                    className="button-started"
+                                    aria-label="Get Started"
+                                >
+                                    Get Started
+                                </div>
+                                <div
+                                    className="button-video"
+                                    aria-label="Watch Video"
+                                >
                                     <span>
                                         <img src={watchvideo} alt="" />
                                     </span>
@@ -48,13 +58,25 @@ export default function Header() {
                             <div className="sponsor">
                                 <div className="text">Sponsored by :</div>
                                 <div className="tech">
-                                    <a href="www.paypal.com" target="_blank">
+                                    <a
+                                        href="https://www.paypal.com"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
                                         <img src={paypal} alt="" />
                                     </a>
-                                    <a href="www.google.com" target="_blank">
+                                    <a
+                                        href="https://www.google.com"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
                                         <img src={google} alt="" />
                                     </a>
-                                    <a href="www.dropbox.com" target="_blank">
+                                    <a
+                                        href="https://www.dropbox.com"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
                                         <img src={dropbox} alt="" />
                                     </a>
                                 </div>
@@ -95,9 +117,11 @@ const HeroWrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+    @media screen and (min-width: 900px) {
+        margin: 5rem 0;
+    }
     @media screen and (min-width: 1900px) {
         margin: 5rem 0;
-    
     }
 `;
 
