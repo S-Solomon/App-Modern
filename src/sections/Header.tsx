@@ -284,9 +284,9 @@ const RightArea = styled.div`
             height: auto;
             @media (min-width: 768px) {
                 display: block;
-                width: 350px;
+                width: 400px;
                 height: 400px;
-                margin-left: -5px;
+                margin-left: -100px;
             }
             @media screen and (min-width: 1024px) {
                 width: 500px;
