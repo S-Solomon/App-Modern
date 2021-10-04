@@ -279,8 +279,6 @@ const RightArea = styled.div`
         img {
             display: none;
             margin: 0 auto;
-            /* min-width: 0; */
-            /* max-width: 100%; */
             height: auto;
             @media (min-width: 768px) {
                 display: block;
