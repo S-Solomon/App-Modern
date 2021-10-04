@@ -11,15 +11,16 @@ import dropbox from '../assets/dropbox.svg'
 import Modal from '../components/modal/Modal'
 
 type ClickHandler = () => void;
+type ScrollHandler = () => void;
 
 export default function Header() {
     const [scrollHeight, setScrollHeight] = useState(0);
     const [modalActive, setModalActive] = useState(false);
 
-    const handleScroll = () => {
+    const handleScroll: ScrollHandler = () => {
         const position = window.scrollY;
         setScrollHeight(position);
-    }
+    };
 
     const modalClickHandler: ClickHandler = () => {
         setModalActive(false);
