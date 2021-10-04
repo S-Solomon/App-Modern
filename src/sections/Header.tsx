@@ -182,6 +182,9 @@ const LeftArea = styled.div`
             display: inline-block;
             transition: all 0.25s;
             font-weight: 500;
+            &:hover {
+                box-shadow: rgb(0 0 0 / 50%) 0px 12px 24px -10px;
+            }
             @media screen and (min-width: 1600px) {
                 padding: 0.8rem 1.8rem;
                 font-size: 1rem;
