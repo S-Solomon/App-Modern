@@ -1,22 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import { IoMdClose } from 'react-icons/io';
 
-const Modal = () => {
+interface Props {
+    closeModal: any;
+}
+
+const Modal = ( {closeModal}:Props) => {
     return (
-        <ModalStyled aria-label="modal opened" role="dialog">
+        <ModalStyled
+            aria-label="modal opened"
+            role="dialog"
+            onClick={closeModal}
+        >
             <div className="body">
                 <div className="inner">
                     <div className="video-wrapper">
-                        <button className="close-modal"></button>
+                        <IoMdClose>
+                            className="close-modal"
+                            onClick={closeModal}
+                        </IoMdClose>
                         <iframe
-                            title="youtube video"
-                            width="460"
-                            height="230"
-                            src="//www.youtube.com/embed/ZNA9rmDsYVE?autoplay=1&amp;cc_load_policy=1&amp;controls=1&amp;disablekb=0&amp;enablejsapi=0&amp;fs=1&amp;iv_load_policy=1&amp;loop=0&amp;rel=0&amp;showinfo=1&amp;start=0&amp;wmode=transparent&amp;theme=dark&amp;mute=0"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/L3LMbpZIKhQ"
+                            title="YouTube video player"
                             frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            // allowFullscreen=""
-                            // tabindex="-1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
                         ></iframe>
                     </div>
                 </div>
@@ -44,17 +55,28 @@ const ModalStyled = styled.div`
         width: 100%;
         height: 100%;
         margin: 0 auto;
-        display: table;
         .inner {
-            display: table-cell;
-            vertical-align: middle;
             width: 100%;
             height: 100%;
         }
         .video-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
-            margin: 30px;
-            width: auto;
+            /* background-color: #333; */
+            height: 100%;
+            width: 100%;
+            /* margin: 100px; */
+            /* margin: 0 auto; */
+            svg {
+                position: absolute;
+                top: 31%;
+                right: 8.5%;
+                color: white;
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 `;

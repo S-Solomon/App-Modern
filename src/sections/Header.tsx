@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect } from 'react';
 import styled from "styled-components"
 import { InnerLayout, OuterLayout } from "../styles/Layout"
 import bannerBg from '../assets/bannerBg.png'
@@ -10,6 +10,7 @@ import google from '../assets/google.svg'
 import dropbox from '../assets/dropbox.svg'
 import Modal from '../components/modal/Modal'
 
+type ClickHandler = () => void;
 
 export default function Header() {
     const [scrollHeight, setScrollHeight] = useState(0);
@@ -20,77 +21,89 @@ export default function Header() {
         setScrollHeight(position);
     }
 
+    const modalClickHandler: ClickHandler = () => {
+        setModalActive(false);
+    };
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
     }, [scrollHeight])
 
     return (
-        <HeaderStyled>
-            <Navbar isScrolling={scrollHeight} />
-            <OuterLayout>
-                <InnerLayout>
-                    <HeroWrapper>
-                        <LeftArea>
-                            <h1>Experience your ultimate mobile application</h1>
-                            <p>
-                                Get your blood tests delivered at home. collect
-                                all samples from the victory of the managements
-                                that supplies best design system guidelines
-                                ever.
-                            </p>
-                            <div className="buttonGroup">
-                                <div
-                                    className="button-started"
-                                    aria-label="Get Started"
-                                >
-                                    Get Started
-                                </div>
-                                <div
-                                    className="button-video"
-                                    aria-label="Watch Video"
-                                >
-                                    <span>
-                                        <img src={watchvideo} alt="" />
-                                    </span>
-                                    Watch Video
-                                </div>
-                            </div>
-                            <div className="sponsor">
-                                <div className="text">Sponsored by :</div>
-                                <div className="tech">
-                                    <a
-                                        href="https://www.paypal.com"
-                                        target="_blank"
-                                        rel="noreferrer"
+        <React.Fragment>
+            <HeaderStyled>
+                <Navbar isScrolling={scrollHeight} />
+                <OuterLayout>
+                    <InnerLayout>
+                        <HeroWrapper>
+                            <LeftArea>
+                                <h1>
+                                    Experience your ultimate mobile application
+                                </h1>
+                                <p>
+                                    Get your blood tests delivered at home.
+                                    collect all samples from the victory of the
+                                    managements that supplies best design system
+                                    guidelines ever.
+                                </p>
+                                <div className="buttonGroup">
+                                    <div
+                                        className="button-started"
+                                        aria-label="Get Started"
                                     >
-                                        <img src={paypal} alt="" />
-                                    </a>
-                                    <a
-                                        href="https://www.google.com"
-                                        target="_blank"
-                                        rel="noreferrer"
+                                        Get Started
+                                    </div>
+                                    <div
+                                        onClick={() =>
+                                            setModalActive(!modalActive)
+                                        }
+                                        className="button-video"
+                                        aria-label="Watch Video"
                                     >
-                                        <img src={google} alt="" />
-                                    </a>
-                                    <a
-                                        href="https://www.dropbox.com"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <img src={dropbox} alt="" />
-                                    </a>
+                                        <span>
+                                            <img src={watchvideo} alt="" />
+                                        </span>
+                                        Watch Video
+                                    </div>
                                 </div>
-                            </div>
-                        </LeftArea>
-                        <RightArea>
-                            <div className="wrapper">
-                                <img src={bannerThumb} alt="a smartphone" />
-                            </div>
-                        </RightArea>
-                    </HeroWrapper>
-                </InnerLayout>
-            </OuterLayout>
-        </HeaderStyled>
+                                <div className="sponsor">
+                                    <div className="text">Sponsored by :</div>
+                                    <div className="tech">
+                                        <a
+                                            href="https://www.paypal.com"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <img src={paypal} alt="" />
+                                        </a>
+                                        <a
+                                            href="https://www.google.com"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <img src={google} alt="" />
+                                        </a>
+                                        <a
+                                            href="https://www.dropbox.com"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <img src={dropbox} alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </LeftArea>
+                            <RightArea>
+                                <div className="wrapper">
+                                    <img src={bannerThumb} alt="a smartphone" />
+                                </div>
+                            </RightArea>
+                        </HeroWrapper>
+                    </InnerLayout>
+                </OuterLayout>
+            </HeaderStyled>
+            {modalActive && <Modal closeModal={modalClickHandler}/>}
+        </React.Fragment>
     );
 }
 

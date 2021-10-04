@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { MouseEvent, useState } from 'react'
 import styled from 'styled-components'
 import logoLight from '../../assets/logoLight.svg'
 import logoDark from '../../assets/logoDark.svg'
@@ -12,9 +12,9 @@ interface Props {
 const Navbar = ({ isScrolling }: Props) => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     
-    const backdropClickHandler = () => {
-        setDrawerOpen(false)
-    }
+    const backdropClickHandler = (e: MouseEvent<SVGElement>) => {
+        setDrawerOpen(false);
+    };
 
     return (
         <React.Fragment>
