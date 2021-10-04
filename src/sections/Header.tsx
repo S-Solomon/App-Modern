@@ -59,7 +59,7 @@ export default function Header() {
                                             setModalActive(!modalActive)
                                         }
                                         className="button-video"
-                                        aria-label="Watch Video"
+                                        aria-labelledby="click here to watch Video"
                                     >
                                         <span>
                                             <img src={watchvideo} alt="" />

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { IoMdClose } from 'react-icons/io';
 
 interface Props {
+    // closeModal:  () => void;
     closeModal: any;
 }
 
@@ -16,8 +17,9 @@ const Modal = ( {closeModal}:Props) => {
             <div className="body">
                 <div className="inner">
                     <div className="video-wrapper">
-                        <IoMdClose>
+                        <IoMdClose data-testid="modal-close-button">
                             className="close-modal"
+                            aria-label="close modal by clicking this button"
                             onClick={closeModal}
                         </IoMdClose>
                         <iframe
