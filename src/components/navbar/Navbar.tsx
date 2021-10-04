@@ -68,14 +68,28 @@ const NavbarStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     transition: 0.3s all ease;
-    /* @media screen and (min-width: 800px) {
-        padding: 1rem 8rem;
-    } */
+    
     @media (min-width: 768px) {
         padding: 1rem 2rem;
     }
-    @media (min-width: 1200px) {
+    @media screen and (min-width: 900px) {
         padding: 1rem 8rem;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 1rem 4rem;
+    }
+    @media screen and (min-width: 1300px) {
+        padding: 1rem 8rem;
+    }
+    @media screen and (min-width: 1440px) {
+        padding: 1rem 12rem;
+    }
+    @media screen and (min-width: 1900px) {
+        padding: 1rem 18rem;
+    }
+    
+    @media screen and (min-width: 2100px) {
+        padding: 1rem 20rem;
     }
 `;
 const ContainerStyled = styled.div`
@@ -129,6 +143,10 @@ const ButtonStyled = styled.button`
     &:hover {
         background: white;
         color: var(--primary-color);
+    }
+    @media screen and (min-width: 1600px) {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
     }
 `;
 

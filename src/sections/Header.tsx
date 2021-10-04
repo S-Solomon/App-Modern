@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { InnerLayout, OuterLayout } from "../styles/Layout"
 import bannerBg from '../assets/bannerBg.png'
 import Navbar from "../components/navbar/Navbar"
-import mobile from '../assets/mobile.svg'
+import bannerThumb from '../assets/bannerThumb.png'
 import watchvideo from '../assets/watchvideo.svg'
 import paypal from '../assets/paypal.svg'
 import google from '../assets/google.svg'
@@ -62,7 +62,7 @@ export default function Header() {
                         </LeftArea>
                         <RightArea>
                             <div className="wrapper">
-                                <img src={mobile} alt="a smartphone" />
+                                <img src={bannerThumb} alt="a smartphone" />
                             </div>
                         </RightArea>
                     </HeroWrapper>
@@ -74,7 +74,6 @@ export default function Header() {
 
 
 const HeaderStyled = styled.header`
-    min-height: 100vh;
     width: 100%;
     background-image: url(${bannerBg});
     background-repeat: no-repeat;
@@ -82,6 +81,13 @@ const HeaderStyled = styled.header`
     background-position: top left;
     background-color: var(--primary-color);
     overflow: hidden;
+    border-bottom-right-radius: 6rem;
+    @media screen and (min-width: 480px) {
+        border-bottom-right-radius: 9rem;
+    }
+    @media screen and (min-width: 1220px) {
+        border-bottom-right-radius: 250px;
+    }
 `;
 
 const HeroWrapper = styled.div`
@@ -89,7 +95,10 @@ const HeroWrapper = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+    @media screen and (min-width: 1900px) {
+        margin: 5rem 0;
     
+    }
 `;
 
 
@@ -105,7 +114,15 @@ const LeftArea = styled.div`
             font-size: 3.2rem;
         }
         @media (min-width: 768px) {
-            width: 450px;
+            font-size: 3rem;
+        }
+        @media screen and (min-width: 1300px) {
+            font-size: 4rem;
+            max-width: 1000px;
+        }
+        @media screen and (min-width: 1600px) {
+            font-size: 4.8rem;
+            max-width: 1000px;
         }
     }
     p {
@@ -115,6 +132,14 @@ const LeftArea = styled.div`
         margin-bottom: 2rem;
         @media (min-width: 768px) {
             max-width: 400px;
+        }
+        @media screen and (min-width: 1300px) {
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+        @media screen and (min-width: 1600px) {
+            font-size: 1.25rem;
+            max-width: 600px;
         }
     }
     .buttonGroup {
@@ -133,6 +158,10 @@ const LeftArea = styled.div`
             display: inline-block;
             transition: all 0.25s;
             font-weight: 500;
+            @media screen and (min-width: 1600px) {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+            }
         }
         .button-video {
             display: flex;
@@ -147,6 +176,10 @@ const LeftArea = styled.div`
             background-color: transparent;
             color: white;
             font-size: 0.875rem;
+            @media screen and (min-width: 1600px) {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+            }
             span {
                 display: inline-block;
                 margin-right: 0.6rem;
@@ -166,6 +199,9 @@ const LeftArea = styled.div`
             @media (min-width: 768px) {
                 width: 30%;
             }
+            @media (min-width: 1900px) {
+                width: 20%;
+            }
         }
         .tech {
             display: flex;
@@ -177,6 +213,9 @@ const LeftArea = styled.div`
                     height: auto;
                     @media (min-width: 768px) {
                         width: 4rem;
+                    }
+                    @media (min-width: 1600px) {
+                        width: 5rem;
                     }
                 }
             }
@@ -190,16 +229,42 @@ const RightArea = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (min-width: 1300px) {
+        width: 40%;
+    }
     .wrapper {
+        height: 100%;
+        width: 100%;
         img {
             display: none;
             margin: 0 auto;
-            min-width: 0;
-            max-width: 100%;
+            /* min-width: 0; */
+            /* max-width: 100%; */
             height: auto;
             @media (min-width: 768px) {
-                display: unset;
-                width: 100%;
+                display: block;
+                width: 350px;
+                height: 400px;
+                margin-left: -5px;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 500px;
+                margin-left: -100px;
+            }
+            @media screen and (min-width: 900px) {
+                width: 400px;
+                width: 300%;
+                margin-left: -200px;
+            }
+            @media screen and (min-width: 1300px) {
+                width: 800px;
+                height: 100%;
+                margin-left: -200px;
+            }
+            @media screen and (min-width: 1920px) {
+                margin-left: -200px;
+                height: 110%;
+                width: 900px;
             }
         }
     }
