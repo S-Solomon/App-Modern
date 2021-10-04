@@ -31,8 +31,8 @@ export default function Header() {
                         <LeftArea>
                             <h1>Experience your ultimate mobile application</h1>
                             <p>
-                                Get your blood tests delivered at let home
-                                collect sample from the victory of the
+                                Get your blood tests delivered at  home.
+                                collect all samples from the victory of the
                                 managements that supplies best design system
                                 guidelines ever.
                             </p>
