@@ -11,8 +11,10 @@ const FeatureOne = () => {
                     <FeatureOneStyled>
                         <div className="container">
                             <div className="topic">
-                                <p>Quality features</p>
-                                <h2>Meet exciting feature of app</h2>
+                                <p className="subtitle">Quality features</p>
+                                <h2 className="primary-title">
+                                    Meet exciting feature of app
+                                </h2>
                             </div>
                             <div className="items-wrapper">
                                 {FeatureOneData.map((data) => (
@@ -21,15 +23,16 @@ const FeatureOne = () => {
                                             <img src={data.img} alt="" />
                                         </div>
                                         <div className="text-container">
-                                            <h2>{data.title}</h2>
-                                            <div className="para">
-                                                {data.text}
+                                            <h2 className="secondary-title">
+                                                {data.title}
+                                            </h2>
+                                            <div className="paragraph-container">
+                                                <p className="para">{data.text}</p>
                                             </div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                            
                         </div>
                     </FeatureOneStyled>
                 </InnerLayout>
