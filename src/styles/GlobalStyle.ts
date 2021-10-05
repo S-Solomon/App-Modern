@@ -33,22 +33,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     /* CUSTOM CSS CLASSNAMES */
-    .primary-title {
-        line-height: 1.3;
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: var(--heading-color);
-        letter-spacing: -0.5px;
-    }
-
-    .secondary-title {
-        color: var(--heading-color);
-        line-height: 1.4;
-        font-weight: 700;
-        font-size: 1.125rem;
-        letter-spacing: -0.5px;
-    }
-
     .subtitle {
         letter-spacing: 1.5px;
         text-transform: uppercase;
@@ -58,7 +42,37 @@ const GlobalStyle = createGlobalStyle`
         font-size: 0.75rem;
         color: var(--subtitle-color);
         opacity: 1;
+        @media screen and (min-width: 640px) {
+            font-size: .9rem;
+        }
     }
+    .primary-title {
+        line-height: 1.3;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--heading-color);
+        letter-spacing: -0.5px;
+        @media screen and (min-width: 640px) {
+            font-size: 1.8rem;
+        }
+        @media screen and (min-width: 1620px) {
+            font-size: 2.3rem;
+        }
+    }
+
+    .secondary-title {
+        color: var(--heading-color);
+        line-height: 1.4;
+        font-weight: 700;
+        font-size: 1.125rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.6rem;
+        @media screen and (min-width: 1220px) {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
 
     .para {
         color: var(--text-color);
