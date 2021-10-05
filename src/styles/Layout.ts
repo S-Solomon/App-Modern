@@ -2,8 +2,11 @@ import styled from 'styled-components'
 
 export const InnerLayout = styled.div`
     padding: 4rem 0rem;
-    @media screen and (min-width: 1280px) {
-        /* padding: 8rem 0; */
+    @media screen and (min-width: 640px) {
+        padding: 6rem 0;
+    }
+    @media screen and (min-width: 1220px) {
+        padding: 7.5rem 0;
     }
 `;
 
