@@ -56,7 +56,6 @@ const FeatureOneStyled = styled.section`
         @media screen and (min-width: 1024px){
             max-width: 1020px;
         }
-        @media screen and (min-width: 480px){} */
         .topic {
             text-align: center;
             margin-bottom: 3.1rem;
@@ -97,6 +96,9 @@ const FeatureOneStyled = styled.section`
                 padding: 0 1rem;
                 @media screen and (min-width: 768px) {
                     padding: 0 1.6rem;
+                }
+                @media screen and (min-width: 1366px) {
+                    padding: 0 2.5rem;
                 }
                 @media screen and (min-width: 1620px) {
                     padding: 0 3.1rem;
