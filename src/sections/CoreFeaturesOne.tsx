@@ -46,6 +46,7 @@ export default CoreFeaturesOne
 
 const CoreFeaturesOneStyled = styled.section`
     position: relative;
+    z-index: -1;
     @media screen and (min-width: 768px) {
         padding: 0.63rem 0;
     }
