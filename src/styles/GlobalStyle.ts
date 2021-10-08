@@ -55,8 +55,17 @@ const GlobalStyle = createGlobalStyle`
         @media screen and (min-width: 640px) {
             font-size: 1.8rem;
         }
-        @media screen and (min-width: 1620px) {
+        @media screen and (min-width: 768px) {
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 1024px) {
             font-size: 2.3rem;
+        }
+        @media screen and (min-width: 1220px) {
+            font-size: 2.6rem;
+        }
+        @media screen and (min-width: 1620px) {
+            font-size: 2.9rem;
         }
     }
 
@@ -79,6 +88,19 @@ const GlobalStyle = createGlobalStyle`
         font-size: 15px;
         font-weight: 400;
         line-height: 1.85;
+        @media screen and (min-width: 480px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 768px) {
+            line-height: 2;
+        }
+        @media screen and (min-width: 1220px) {
+            font-size: 17px;
+            line-height: 2.2;
+        }
+        @media screen and (min-width: 1620px) {
+            font-size: 18px;
+        }
     }
 
     /* SCROLL CLASSES FOR NAVBAR */
