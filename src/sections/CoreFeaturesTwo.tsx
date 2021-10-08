@@ -40,7 +40,12 @@ const CoreFeaturesTwo = () => {
 
 export default CoreFeaturesTwo
 
-const CoreFeaturesTwoStyled = styled.section``
+const CoreFeaturesTwoStyled = styled.section`
+    margin-top: -15px;
+    @media screen and (min-width: 768px) {
+        margin-top: -25px;
+    }
+`
 
 const Wrapper = styled.div`
     display: flex;
