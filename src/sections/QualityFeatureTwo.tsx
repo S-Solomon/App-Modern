@@ -62,6 +62,7 @@ const Content = styled.div`
     display: grid;
     gap: 37px 0;
     grid-template-columns: 1fr;
+    margin: 0 auto;
     @media screen and (min-width: 480px) {
         width: 80%;
     }
