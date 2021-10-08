@@ -49,6 +49,11 @@ const CoreFeaturesTwoStyled = styled.section`
 
 const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+    }
 `
 
 const Text = styled.div`
@@ -115,10 +120,11 @@ const Image = styled.div`
     justify-content: center;
     align-items: center;
     img {
-        display: none;
+        width: 100%;
+        margin-top: 2rem;
         @media screen and (min-width: 768px) {
-            display: unset;
-            width: 100%;
+            /* width: 50%; */
+            margin-top: unset;
         }
     }
 `
