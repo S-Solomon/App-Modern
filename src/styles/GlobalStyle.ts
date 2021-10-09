@@ -12,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
         --heading-color: #0F2137;
         --text-color: #343D48;
         --muted-color: #7b8188;
+
+        --yellow-color: #F6C416;
     }
 
     *, ::before, ::after {
