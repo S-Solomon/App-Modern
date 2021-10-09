@@ -39,10 +39,9 @@ export default FunctionOne
 
 
 const FunctionOneStyled = styled.section`
-    width: 100%;
     background-image: url(${bgPattern});
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-color: var(--primary-color);
     overflow: hidden;
