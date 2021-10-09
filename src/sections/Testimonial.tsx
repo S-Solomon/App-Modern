@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import TestimonialData from '../data/TestimonialData'
-// import star from '../assets/testimonial/star.svg'
-// import mutedstar from '../assets/testimonial/mutedstar.svg'
 import { InnerLayout, OuterLayout } from '../styles/Layout'
 import { AiFillStar } from 'react-icons/ai'
 
@@ -117,7 +115,9 @@ const Content = styled.div`
         .slick-arrow.slick-prev,
         .slick-arrow.slick-next {
             display: none;
-            pointer-events: none;
+            /* background-color: red; */
+            /* pointer-events: none; */
+            /* cursor: pointer; */
         }
         .slider-container {
             /* margin: 0 auto; */
