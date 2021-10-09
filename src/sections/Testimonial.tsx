@@ -93,7 +93,9 @@ const Testimonial = () => {
 
 export default Testimonial
 
-const TestimonialStyled = styled.section``
+const TestimonialStyled = styled.section`
+    z-index: -1;
+`
 
 const Heading = styled.div`
     text-align: center;
@@ -103,6 +105,7 @@ const Heading = styled.div`
 
 const Content = styled.div`
     .slider {
+        z-index: -1;
         width: 550px;
         width: 60vw;
         margin: 0 auto;

@@ -1,4 +1,4 @@
-import { QualityFeatureOne, Header, CoreFeaturesOne, QualityFeatureTwo, CoreFeaturesTwo, FunctionOne, Testimonial } from './sections'
+import { QualityFeatureOne, Header, CoreFeaturesOne, QualityFeatureTwo, CoreFeaturesTwo, FunctionOne, Testimonial, CoreFeaturesThree } from './sections'
 
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
       <CoreFeaturesTwo />
       <FunctionOne />
       <Testimonial />
+      <CoreFeaturesThree />
       <section style={{height: '100vh', backgroundColor: 'tomato'}}></section>
       {/* <section></section> */}
       {/* <section></section> */}
