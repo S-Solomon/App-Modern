@@ -67,10 +67,11 @@ const Wrapper = styled.div`
             width: 800px;
         }
         .item {
-            background: #f0ebe1;
             background: white;
             padding: 10px 20px;
-            border-bottom: 1px solid #e5ecf4;
+            &:not(:last-child) {
+                border-bottom: 1px solid #e5ecf4;
+            }
             .title {
                 display: flex;
                 h2 {
@@ -139,11 +140,12 @@ const Wrapper = styled.div`
                 overflow: hidden;
                 transition: all 0.5s cubic-bezier(0, 1, 0, 1);
                 padding-top: 1rem;
-                line-height: 1.9;
-                letter-spacing: 1.1px;
+                line-height: 1.85;
+                letter-spacing: 1px;
                 font-size: 1rem;
                 margin-left: 2.4rem;
                 font-family: 'DM Sans', sans-serif;
+                font-weight: 400;
             }
             .content.show {
                 height: auto;
