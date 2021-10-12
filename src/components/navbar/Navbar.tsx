@@ -67,7 +67,7 @@ const NavbarStyled = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.3s all ease;
+    transition: 0.2s all ease;
     
     @media (min-width: 768px) {
         padding: 1rem 2rem;

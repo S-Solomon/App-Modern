@@ -11,7 +11,7 @@ const Footer = () => {
                     <Wrapper>
                         <div className="content">
                             {FooterData.map((footer) => (
-                                <div className="item">
+                                <div className="item" key={footer.id}>
                                     <h2>{footer.title}</h2>
                                     <nav>
                                         <a href="/">{footer.link1}</a>
