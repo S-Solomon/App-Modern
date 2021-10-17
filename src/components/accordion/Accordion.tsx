@@ -141,7 +141,7 @@ const Wrapper = styled.div`
                 transition: all 0.5s cubic-bezier(0, 1, 0, 1);
                 padding-top: 1rem;
                 line-height: 1.85;
-                letter-spacing: 1px;
+                letter-spacing: .5px;
                 font-size: 1rem;
                 margin-left: 2.4rem;
                 font-family: 'DM Sans', sans-serif;
@@ -151,6 +151,7 @@ const Wrapper = styled.div`
                 height: auto;
                 max-height: 9999px;
                 transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+                font-family: 'DM Sans', sans-serif;
             }
         }
     }
