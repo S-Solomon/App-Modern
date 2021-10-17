@@ -37,4 +37,8 @@ const Heading = styled.div`
 `
 
 
-const Content = styled.div``;
+const Content = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
