@@ -1,8 +1,7 @@
 # APP MODERN
 A moddrn SaaS app landing page
 
-## Tech Stack:
-
+## Tech Stack
 * React Js
 * Typescript
 * Styled Components
