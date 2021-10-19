@@ -1,5 +1,5 @@
 # APP MODERN
-A moddrn SaaS app landing page
+A production level design, modern SaaS app landing page
 
 ## Tech Stack
 * React Js
