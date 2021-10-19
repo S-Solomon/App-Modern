@@ -1,6 +1,7 @@
 # APP MODERN
 
 ## Tech Stack:
+
 * React Js
 * Typescript
 * Styled Components
@@ -18,8 +19,6 @@ came only with the desktop version , so i had to make the mobile version myself.
 
 
 ## Improvements
-I probably hard coded some things like the title and subtitle, i could have easily 
-made them into a component. I also could have written more tests for the other components.
-
-
-
+I hard coded some things like the title and subtitle, i could have easily 
+made them into a component because it is repeated throught the page. I 
+also could have written more tests for the other components.
