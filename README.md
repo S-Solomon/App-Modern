@@ -6,11 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * React Js
 * Typescript
 * Styled Components
-* Nanoid
+* React Testing Library
 
 
 
-### `npm start`
+### `Approach`
+I went with the mobile first approach when building this project. The figma file file come only with the desktop version , so i 
+had to make the mobile version myself.
 
 
 ### `npm test`
