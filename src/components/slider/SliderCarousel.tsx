@@ -13,7 +13,7 @@ const SliderCarousel = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         swipeToSlide: true,
@@ -32,7 +32,7 @@ const SliderCarousel = () => {
                 },
             },
             {
-                breakpoint: 1920,
+                breakpoint: 1620,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,

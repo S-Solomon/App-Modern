@@ -30,16 +30,36 @@ const Navbar = ({ isScrolling }: Props) => {
                     <LinksStyled
                         className={isScrolling > 0 ? 'linksScrolled' : ''}
                     >
-                        <Link to="home" smooth={true} duration={300}>
+                        <Link
+                            to="home"
+                            smooth={true}
+                            duration={300}
+                            activeClass="green"
+                        >
                             Home
                         </Link>
-                        <Link to="features" smooth={true} duration={400}>
+                        <Link
+                            to="features"
+                            smooth={true}
+                            duration={400}
+                            activeClass="green"
+                        >
                             Features
                         </Link>
-                        <Link to="testimonial" smooth={true} duration={500}>
+                        <Link
+                            to="testimonial"
+                            smooth={true}
+                            duration={500}
+                            activeClass="green"
+                        >
                             Testimonial
                         </Link>
-                        <Link to="pricing" smooth={true} duration={600}>
+                        <Link
+                            to="pricing"
+                            smooth={true}
+                            duration={600}
+                            activeClass="green"
+                        >
                             Pricing
                         </Link>
                     </LinksStyled>

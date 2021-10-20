@@ -202,6 +202,9 @@ const GlobalStyle = createGlobalStyle`
             color: black;
         }
     }
+    .green {
+        color: var(--secondary-color);
+    }
 `;
 
 
