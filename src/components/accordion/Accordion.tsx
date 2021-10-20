@@ -51,6 +51,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: -1;
     .accordion {
         position: relative;
         width: 250px;
