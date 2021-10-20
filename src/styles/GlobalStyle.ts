@@ -197,6 +197,7 @@ const GlobalStyle = createGlobalStyle`
         }
     }
     .linksScrolled {
+        color: black;
         a {
             color: black;
         }
