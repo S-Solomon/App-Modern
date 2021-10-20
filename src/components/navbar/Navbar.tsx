@@ -4,6 +4,7 @@ import logoLight from '../../assets/logoLight.svg'
 import logoDark from '../../assets/logoDark.svg'
 import { IoMdMenu } from 'react-icons/io';
 import SideDrawer from '../sidedrawer/SideDrawer'
+import { Link } from 'react-scroll'
 
 interface Props {
     isScrolling: number;
@@ -29,10 +30,18 @@ const Navbar = ({ isScrolling }: Props) => {
                     <LinksStyled
                         className={isScrolling > 0 ? 'linksScrolled' : ''}
                     >
-                        <a href="/">Home</a>
-                        <a href="/">Features</a>
-                        <a href="/">Testimonial</a>
-                        <a href="/">Pricing</a>
+                        <Link to="home" smooth={true} duration={300}>
+                            Home
+                        </Link>
+                        <Link to="features" smooth={true} duration={400}>
+                            Features
+                        </Link>
+                        <Link to="testimonial" smooth={true} duration={500}>
+                            Testimonial
+                        </Link>
+                        <Link to="pricing" smooth={true} duration={600}>
+                            Pricing
+                        </Link>
                     </LinksStyled>
                 </ContainerStyled>
                 <ButtonsContainer>
@@ -44,12 +53,18 @@ const Navbar = ({ isScrolling }: Props) => {
                         Get Started
                     </ButtonStyled>
                     <Burger className={isScrolling > 0 ? 'menuScrolled' : ''}>
-                        <IoMdMenu onClick={() => setDrawerOpen(!drawerOpen)} data-testid='burger'/>
+                        <IoMdMenu
+                            onClick={() => setDrawerOpen(!drawerOpen)}
+                            data-testid="burger"
+                        />
                     </Burger>
                 </ButtonsContainer>
             </NavbarStyled>
             {drawerOpen ? (
-                <SideDrawer closeDrawer={backdropClickHandler} data-testid='drawer'/>
+                <SideDrawer
+                    closeDrawer={backdropClickHandler}
+                    data-testid="drawer"
+                />
             ) : null}
         </React.Fragment>
     );
@@ -124,6 +139,9 @@ const LinksStyled = styled.div`
         color: white;
         margin-left: 2rem;
         cursor: pointer;
+        &:hover {
+            color: var(--secondary-color);
+        }
     }
 `;
 

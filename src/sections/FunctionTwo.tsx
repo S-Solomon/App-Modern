@@ -5,7 +5,7 @@ import { InnerLayout, OuterLayout } from '../styles/Layout'
 
 const FunctionTwo = () => {
     return (
-        <FunctionTwoStyled>
+        <FunctionTwoStyled id="pricing">
             <InnerLayout>
                 <OuterLayout>
                     <Wrapper>

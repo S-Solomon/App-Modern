@@ -7,7 +7,7 @@ const Testimonial = () => {
 
 
     return (
-        <TestimonialStyled>
+        <TestimonialStyled id="testimonial">
             <InnerLayout>
                 <OuterLayout>
                     <Heading>

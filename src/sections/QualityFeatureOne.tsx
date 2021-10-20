@@ -6,7 +6,7 @@ import FeatureOneData from '../data/FeatureOneData'
 const FeatureOne = () => {
     return (
         <React.Fragment>
-            <OuterLayout>
+            <OuterLayout id="features">
                 <InnerLayout>
                     <FeatureOneStyled>
                         <div className="container">

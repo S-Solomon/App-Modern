@@ -32,7 +32,7 @@ export default function Header() {
 
     return (
         <React.Fragment>
-            <HeaderStyled>
+            <HeaderStyled id="home">
                 <Navbar isScrolling={scrollHeight} />
                 <OuterLayout>
                     <InnerLayout>
