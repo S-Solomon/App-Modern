@@ -13,7 +13,7 @@ const SliderCarousel = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         swipeToSlide: true,
@@ -27,6 +27,27 @@ const SliderCarousel = () => {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
+                    autoplay:true,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 1920,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay:true,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay:true,
                     dots: false,
                 },
             },
@@ -36,6 +57,7 @@ const SliderCarousel = () => {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
+                    autoplay: true,
                     dots: false
                 },
             }
