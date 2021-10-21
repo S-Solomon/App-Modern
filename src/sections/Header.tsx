@@ -286,14 +286,18 @@ const RightArea = styled.div`
                 height: 400px;
                 margin-left: -100px;
             }
-            @media screen and (min-width: 1024px) {
-                width: 500px;
-                margin-left: -100px;
-            }
             @media screen and (min-width: 900px) {
                 width: 400px;
                 width: 300%;
                 margin-left: -200px;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 600px;
+                margin-left: -100px;
+            }
+            @media screen and (min-width: 1280px) {
+                width: 600px;
+                margin-left: -100px;
             }
             @media screen and (min-width: 1300px) {
                 width: 800px;
