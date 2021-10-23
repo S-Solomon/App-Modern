@@ -9,6 +9,7 @@ import paypal from '../assets/paypal.svg'
 import google from '../assets/google.svg'
 import dropbox from '../assets/dropbox.svg'
 import Modal from '../components/modal/Modal'
+import { motion } from 'framer-motion'
 
 type ClickHandler = () => void;
 type ScrollHandler = () => void;
@@ -37,7 +38,15 @@ export default function Header() {
                 <OuterLayout>
                     <InnerLayout>
                         <HeroWrapper>
-                            <LeftArea>
+                            <LeftArea
+                                initial={{ x: '-100vw' }}
+                                animate={{ x: 0 }}
+                                transition={{
+                                    type: 'spring',
+                                    duration: 2,
+                                    bounce: 0.3,
+                                }}
+                            >
                                 <h1>
                                     Experience your ultimate mobile application
                                 </h1>
@@ -94,7 +103,16 @@ export default function Header() {
                                     </div>
                                 </div>
                             </LeftArea>
-                            <RightArea>
+                            <RightArea
+                                initial={{ x: '100vw' }}
+                                animate={{ x: 0 }}
+                                transition={{
+                                    type: 'tween',
+                                    duration: 2,
+                                    // bounce: 0.3,
+                                    // velocity: 50
+                                }}
+                            >
                                 <div className="wrapper">
                                     <img src={bannerThumb} alt="a smartphone" />
                                 </div>
@@ -103,7 +121,7 @@ export default function Header() {
                     </InnerLayout>
                 </OuterLayout>
             </HeaderStyled>
-            {modalActive && <Modal closeModal={modalClickHandler}/>}
+            {modalActive && <Modal closeModal={modalClickHandler} />}
         </React.Fragment>
     );
 }
@@ -140,7 +158,7 @@ const HeroWrapper = styled.div`
 `;
 
 
-const LeftArea = styled.div`
+const LeftArea = styled(motion.div)`
     color: white;
     h1 {
         line-height: 1.2;
@@ -266,7 +284,7 @@ const LeftArea = styled.div`
 
 
 
-const RightArea = styled.div`
+const RightArea = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
