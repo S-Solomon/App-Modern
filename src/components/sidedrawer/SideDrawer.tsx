@@ -49,7 +49,7 @@ export default SideDrawer
 const DrawerStyled = styled.div`
     background-color: white;
     color: black;
-    z-index: 2;
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;

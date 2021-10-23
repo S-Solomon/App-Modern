@@ -103,7 +103,7 @@ const NavbarStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     transition: 0.2s all ease;
-    
+    z-index: 999;
     @media (min-width: 768px) {
         padding: 1rem 2rem;
     }
